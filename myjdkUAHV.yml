@@ -4,12 +4,12 @@
   tasks:
   - name: install jdk11 on ubuntu18 node1
     apt:
-     name: "{{myjavaonubuntu}}"
+     name: "{{ubuntujava}}"
      state: present
     when: ansible_os_family == "Debian"
 
   - name: install jdk8 on amazonlinux2 node2
     yum:
-     name: "{{myjavaonamazonos}}"
+     name: "{{linuxjava}}"
      state: present
     when: ansible_os_family == "RedHat"
