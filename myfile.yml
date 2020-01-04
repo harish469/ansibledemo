@@ -1,14 +1,5 @@
 ---
-- hosts: webserver
-  become: yes
-  vars: 
-    myvar1: ravi
-    myvar2: venkat
-  tasks:
-  - name:  display myvar1
-    debug:
-      msg: "{{myvar1}}"
-
-  - name: display myvar2
-    debug:
-      msg: "{{myvar2}}"
+- name: i want to create file on all nodes
+  file:
+      path: /home/ravi/ravi.txt
+      state: touch
